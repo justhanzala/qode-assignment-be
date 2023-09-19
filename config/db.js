@@ -1,8 +1,7 @@
 const mongoose = require("mongoose");
 
 const ConnectToMongoDB = () => {
-  const MongoURI =
-    "mongodb+srv://qode-user:qode-user@cluster0.ibnqj.mongodb.net/qode_assignment";
+  const MongoURI = process.env.MONGO_URI;
   mongoose
     .connect(MongoURI, {
       useNewUrlParser: true,
